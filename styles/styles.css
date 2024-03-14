@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 :root {
     --background-color: #f2f2f2;
     --primary-color: white;
     --font-color: black;
-    --font-hover-color: gray;
+    --font-color-hover: gray;
+    --font: 'Poppins', sans-serif;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --radius: 10px;
 }
 
 *,
@@ -10,40 +15,47 @@
 *::after {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+    font-family: var(--font);
+    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
 }
 
-.hero {
-    background: url('your-hero-image.jpg') no-repeat center center;
-    background-size: cover;
-    height: 70vh;
+#logo {
+    width: 20%;
+    margin: 0 auto;
 }
 
-.logo {
-    width: 200px;
-    /* Adjust as needed */
-}
-
-.nav {
+#nav {
     text-align: center;
     padding: 1rem 0;
 }
 
-.nav a {
-    margin: 0 1rem;
+#nav a {
+    margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.services,
-.about,
-.gallery,
-.testimonials,
-.contact {
+#nav a:hover {
+    color: var(--font-color-hover);
+}
+
+#services,
+#about,
+#gallery,
+#testimonials,
+#contact {
     padding: 4rem;
     text-align: center;
 }
@@ -54,9 +66,14 @@ footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.8rem;
+    box-shadow: var(--shadow);
 }
 
 footer a {
-    color: white;
+    color: var(--font-color);
     text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--font-color-hover);
 }
