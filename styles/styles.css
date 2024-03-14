@@ -6,7 +6,7 @@
     --font-color: black;
     --font-color-hover: gray;
     --font: 'Poppins', sans-serif;
-    --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     --radius: 10px;
 }
 
@@ -42,6 +42,7 @@
     margin: 0 15px;
     text-decoration: none;
     color: black;
+    cursor: pointer;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -49,6 +50,15 @@
 
 #nav a:hover {
     color: var(--font-color-hover);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: black;
+    text-align: center;
+    margin: 50px 0;
 }
 
 #services,
@@ -60,13 +70,67 @@
     text-align: center;
 }
 
+#contact p {
+    margin-bottom: 2rem;
+}
+
+#form {
+    margin: 0 auto;
+    width: 100%;
+    padding: 50px;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    background-color: #f2f2f2;
+}
+
+#form label,
+#form input,
+#form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#form input[type="text"],
+#form input[type="email"],
+#form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+#form input[type="text"]:focus,
+#form input[type="email"]:focus,
+#form textarea:focus {
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#form textarea {
+    height: 150px;
+}
+
+#form button {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form button:hover {
+    background-color: #e6e6e6;
+}
+
 footer {
     background: var(--background-color);
     color: var(--font-color);
     text-align: center;
     padding: 1rem;
     font-size: 0.8rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
