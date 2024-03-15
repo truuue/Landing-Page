@@ -1,20 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var showMoreButton = document.getElementById("services-more");
-  var showLessButton = document.getElementById("services-less");
-  var reducedContent = document.getElementById("services-reduced");
-  var fullContent = document.getElementById("services-full");
+  var showMoreButtons = document.querySelectorAll(".show-more");
+  var showLessButtons = document.querySelectorAll(".show-less");
 
-  if (showMoreButton && showLessButton && reducedContent && fullContent) {
-    showMoreButton.addEventListener("click", function (event) {
+  showMoreButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
       event.preventDefault();
-      reducedContent.style.display = "none";
-      fullContent.style.display = "block";
+      var section = button.closest(".about-section, .services-section");
+      section.querySelector(".reduced-content").style.display = "none";
+      section.querySelector(".full-content").style.display = "block";
     });
+  });
 
-    showLessButton.addEventListener("click", function (event) {
+  showLessButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
       event.preventDefault();
-      reducedContent.style.display = "block";
-      fullContent.style.display = "none";
+      var section = button.closest(".about-section, .services-section");
+      section.querySelector(".reduced-content").style.display = "block";
+      section.querySelector(".full-content").style.display = "none";
     });
-  }
+  });
 });
