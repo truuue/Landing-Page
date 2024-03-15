@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/Logo.png" type="image/png" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./flipCard.js"></script>
     <script src="./carousel.js" defer></script>
     <title>Landing Page</title>
   </head>
@@ -26,69 +27,89 @@
       <!-- Add your service images and descriptions here -->
       <h1>Our Services</h1>
       <p>Weddings, Portraits, Maternity, and more...</p>
-      <p>
-        Weddings: With an eye for the candid and a sense for the sublime, we
-        document your special day in a way that will echo through the ages. Our
-        wedding photography is a heartfelt chronicle of your love, crafted to
-        reflect the unique beauty of your union.
-      </p>
+      <div id="services-reduced">
+        <p>
+          Weddings: With an eye for the candid and a sense for the sublime, we
+          document your special day in a way that will echo through the ages.
+          Our wedding photography is a heartfelt chronicle of your love, crafted
+          to reflect the unique beauty of your union.
+        </p>
 
-      <p>
-        Maternity: There's a serene grace to the expectant months, and our
-        maternity photography frames this time of anticipation with tenderness
-        and warmth. Let us capture the glow and the growing bond as you await
-        the arrival of your newest addition.
-      </p>
+        <p>
+          Maternity: There's a serene grace to the expectant months, and our
+          maternity photography frames this time of anticipation with tenderness
+          and warmth. Let us capture the glow and the growing bond as you await
+          the arrival of your newest addition.
+        </p>
+        <a href="#" id="services-more">Show more</a>
+      </div>
 
-      <p>
-        Newborns: The first days of a new life are fleeting and precious. Our
-        newborn photography cherishes these moments with gentle, soulful
-        portraits that celebrate the innocence and wonder of your little one.
-      </p>
+      <div id="services-full" style="display: none">
+        <p>
+          Weddings: With an eye for the candid and a sense for the sublime, we
+          document your special day in a way that will echo through the ages.
+          Our wedding photography is a heartfelt chronicle of your love, crafted
+          to reflect the unique beauty of your union.
+        </p>
 
-      <p>
-        School Photography: From the proud kindergartener to the graduating
-        senior, we chronicle the academic journey with vibrant school
-        photographs that capture the spirit and milestones of the educational
-        experience.
-      </p>
+        <p>
+          Maternity: There's a serene grace to the expectant months, and our
+          maternity photography frames this time of anticipation with tenderness
+          and warmth. Let us capture the glow and the growing bond as you await
+          the arrival of your newest addition.
+        </p>
 
-      <p>
-        Portraits: Individual or family, casual or formal, our portrait sessions
-        are designed to bring out your unique personality. We craft each session
-        to reflect the individuality of our subjects, creating portraits that
-        are as unique as you are.
-      </p>
+        <p>
+          Newborns: The first days of a new life are fleeting and precious. Our
+          newborn photography cherishes these moments with gentle, soulful
+          portraits that celebrate the innocence and wonder of your little one.
+        </p>
 
-      <p>
-        Pets: Pets are undeniably family members, and our pet photography
-        celebrates the joy and companionship they bring into our lives. From
-        playful pups to serene felines, we capture the essence of your furry
-        friends.
-      </p>
+        <p>
+          School Photography: From the proud kindergartener to the graduating
+          senior, we chronicle the academic journey with vibrant school
+          photographs that capture the spirit and milestones of the educational
+          experience.
+        </p>
 
-      <p>
-        Identity Photos: In the era of digital identity, a good photograph can
-        make all the difference. Our identity photos blend professional
-        precision with personal charisma, ensuring that you put your best face
-        forward, whether for passports, licenses, or professional profiles.
-      </p>
+        <p>
+          Portraits: Individual or family, casual or formal, our portrait
+          sessions are designed to bring out your unique personality. We craft
+          each session to reflect the individuality of our subjects, creating
+          portraits that are as unique as you are.
+        </p>
 
-      <p>
-        Photo Booth: Add a dash of fun and spontaneity to any event with our
-        photo booth services! Equipped with a variety of props and backdrops, we
-        bring the laughter and the keepsakes to weddings, parties, and corporate
-        events.
-      </p>
+        <p>
+          Pets: Pets are undeniably family members, and our pet photography
+          celebrates the joy and companionship they bring into our lives. From
+          playful pups to serene felines, we capture the essence of your furry
+          friends.
+        </p>
 
-      <p>
-        Each service is rendered with the commitment to quality that has been
-        the hallmark of the Vernhet name for over five decades. We pride
-        ourselves on creating a comfortable and engaging environment that allows
-        your true self to shine through. At Jean-François Vernhet Photography,
-        we don't just take pictures; we craft experiences that result in
-        timeless images you will treasure forever.
-      </p>
+        <p>
+          Identity Photos: In the era of digital identity, a good photograph can
+          make all the difference. Our identity photos blend professional
+          precision with personal charisma, ensuring that you put your best face
+          forward, whether for passports, licenses, or professional profiles.
+        </p>
+
+        <p>
+          Photo Booth: Add a dash of fun and spontaneity to any event with our
+          photo booth services! Equipped with a variety of props and backdrops,
+          we bring the laughter and the keepsakes to weddings, parties, and
+          corporate events.
+        </p>
+
+        <p>
+          Each service is rendered with the commitment to quality that has been
+          the hallmark of the Vernhet name for over five decades. We pride
+          ourselves on creating a comfortable and engaging environment that
+          allows your true self to shine through. At Jean-François Vernhet
+          Photography, we don't just take pictures; we craft experiences that
+          result in timeless images you will treasure forever.
+        </p>
+        <a href="#" id="services-less">Reduce</a>
+      </div>
     </div>
 
     <div id="about" class="about">
@@ -152,22 +173,13 @@
         <input type="radio" name="slider" id="item-3" />
         <div class="carousel-pictures">
           <label class="carousel-pic" for="item-1">
-            <img
-              src=""
-              alt="picture"
-            />
+            <img src="" alt="picture" />
           </label>
           <label class="carousel-pic" for="item-2">
-            <img
-              src=""
-              alt="picture"
-            />
+            <img src="" alt="picture" />
           </label>
           <label class="carousel-pic" for="item-3">
-            <img
-              src=""
-              alt="picture"
-            />
+            <img src="" alt="picture" />
           </label>
         </div>
       </div>
@@ -232,9 +244,17 @@
     </div>
 
     <div id="contact" class="contact">
-      <!-- Add your contact form here -->
-      <h1>Contact Us</h1>
-      <p>Have a question? Reach out to us.</p>
+      <div class="flip-card" onclick="this.classList.toggle('is-flipped');">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <h1>Contact Us</h1>
+            <p>Have a question? Reach out to us.</p>
+          </div>
+          <div class="flip-card-back">
+            <p>feur</p>
+          </div>
+        </div>
+      </div>
       <!--<div id="card"></div>-->
     </div>
   </body>

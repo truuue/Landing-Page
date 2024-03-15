@@ -64,6 +64,60 @@ h1 {
     margin-bottom: 3rem;
 }
 
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    /* Take full width */
+    perspective: 1000px;
+    /* Perspective for 3D effect */
+    margin-bottom: 20px;
+    /* Space between cards */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* Height adjusts to content */
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+    padding: 20px;
+    /* Add padding for content */
+}
+
+.flip-card-front {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    z-index: 2;
+    /* Ensures front card is on top initially */
+}
+
+.flip-card-back {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    transform: rotateY(180deg);
+    z-index: 1;
+    /* Ensures back card is behind initially */
+}
+
+/* Flip card when .is-flipped is added to the container */
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
 input[type="radio"] {
     display: none;
 }
