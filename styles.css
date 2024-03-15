@@ -125,7 +125,7 @@ h3 {
     transform: rotateY(180deg);
 }
 
-.carousel-container input[type="radio"] {
+input[type="radio"] {
     display: none;
 }
 
@@ -177,6 +177,9 @@ h3 {
 .carousel-pic.right {
     z-index: 1;
     transform: translateX(50%) scale(0.8);
+}
+
+#testimonials input[type="radio"] {
 }
 
 #testimonials {
