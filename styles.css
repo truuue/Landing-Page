@@ -240,13 +240,17 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 50px;
+}
+
+.flip-card-back p {
+    font-size: 20px;
 }
 
 #direction {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 25px;
 }
 
 .flip-card-back img {
