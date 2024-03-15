@@ -30,7 +30,6 @@
 
 #logo {
     width: 20%;
-    margin: 0 auto;
 }
 
 #nav {
@@ -99,4 +98,41 @@ footer a {
 
 footer a:hover {
     color: var(--font-color-hover);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 830px) {
+    #hero {
+        flex-direction: column;
+    }
+
+    #logo {
+        width: 50%;
+    }
+
+    #nav {
+        margin-top: 1rem;
+    }
+
+    #nav a {
+        margin: 0 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #services,
+    #about,
+    #gallery,
+    #testimonials,
+    #contact {
+        padding: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+    
 }
