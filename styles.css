@@ -51,13 +51,20 @@
     color: var(--font-color-hover);
 }
 
-h1 {
+h2 {
     font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: 5px;
     color: black;
     text-align: center;
     margin: 50px 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 50px;
 }
 
 #gallery p {
@@ -118,7 +125,7 @@ h1 {
     transform: rotateY(180deg);
 }
 
-input[type="radio"] {
+.carousel-container input[type="radio"] {
     display: none;
 }
 
@@ -172,6 +179,21 @@ input[type="radio"] {
     transform: translateX(50%) scale(0.8);
 }
 
+#testimonials {
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#testimonials p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
 #services,
 #about,
 #gallery,
@@ -181,8 +203,31 @@ input[type="radio"] {
     text-align: center;
 }
 
-#contact p {
-    margin-bottom: 2rem;
+#services p,
+#about p,
+#testimonials p {
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show-more,
+.show-less {
+    color: var(--font-color-hover);
+    text-decoration: none;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.show-more:hover,
+.show-less:hover {
+    color: var(--font-color);
+    background-color: var(--background-color);
+    box-shadow: var(--shadow);
 }
 
 form {
