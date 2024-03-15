@@ -1,28 +1,20 @@
-// Fonction pour afficher ou masquer le contenu complet des sections
-function toggleContent(sectionId, moreLinkId) {
-  var section = document.getElementById(sectionId);
-  var moreLink = document.getElementById(moreLinkId);
+document.addEventListener("DOMContentLoaded", function () {
+  var showMoreButton = document.getElementById("services-more");
+  var showLessButton = document.getElementById("services-less");
+  var reducedContent = document.getElementById("services-reduced");
+  var fullContent = document.getElementById("services-full");
 
-  if (section.style.display === "none") {
-    section.style.display = "block";
-    moreLink.textContent = "Réduire"; // Changer le texte du lien si le contenu est étendu
-  } else {
-    section.style.display = "none";
-    moreLink.textContent = "En savoir plus"; // Changer le texte du lien si le contenu est réduit
+  if (showMoreButton && showLessButton && reducedContent && fullContent) {
+    showMoreButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      reducedContent.style.display = "none";
+      fullContent.style.display = "block";
+    });
+
+    showLessButton.addEventListener("click", function (event) {
+      event.preventDefault();
+      reducedContent.style.display = "block";
+      fullContent.style.display = "none";
+    });
   }
-}
-
-// Écouteurs d'événements pour les liens "En savoir plus"
-document
-  .getElementById("services-more")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Empêcher le lien de déclencher une action de navigation
-    toggleContent("services-full", "services-more");
-  });
-
-document
-  .getElementById("about-more")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Empêcher le lien de déclencher une action de navigation
-    toggleContent("about-full", "about-more");
-  });
+});
