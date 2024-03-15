@@ -74,7 +74,7 @@ h1 {
     margin-bottom: 2rem;
 }
 
-#form {
+form {
     margin: 0 auto;
     width: 100%;
     padding: 50px;
@@ -83,21 +83,21 @@ h1 {
     background-color: #f2f2f2;
 }
 
-#form label {
+form label {
     text-align: left;
     display: block;
 }
 
-#form label,
-#form input,
-#form textarea {
+form label,
+form input,
+form textarea {
     width: 100%;
     margin: 10px 0;
 }
 
-#form input[type="text"],
-#form input[type="email"],
-#form textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
     margin: 10px 0;
     padding: 10px;
     border: none;
@@ -105,18 +105,18 @@ h1 {
     box-shadow: var(--shadow);
 }
 
-#form input[type="text"]:focus,
-#form input[type="email"]:focus,
-#form textarea:focus {
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
     outline: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#form textarea {
+form textarea {
     height: 150px;
 }
 
-#form button {
+form button {
     background-color: #f2f2f2;
     color: black;
     padding: 10px 20px;
@@ -125,7 +125,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-#form button:hover {
+form button:hover {
     background-color: #e6e6e6;
 }
 
